@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kripasadan School, Latur | Geometric Balance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              school: {
+                primary: '#C41E3A',
+                accent: '#E52D53',
+                paper: '#f3f4f6',
+                ink: '#0f172a',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --school-primary: #C41E3A;
+        --school-accent: #E52D53;
+        --paper: #f3f4f6;
+        --ink: #0f172a;
+        --white: #ffffff;
+      }
+      @keyframes glow {
+        from { box-shadow: 0 0 5px rgba(196, 30, 58, 0.4); }
+        to { box-shadow: 0 0 20px rgba(196, 30, 58, 0.8); }
+      }
+      .animate-glow {
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+      .hero-geometric::after {
+        content: '';
+        position: absolute;
+        right: -50px;
+        bottom: -50px;
+        width: 300px;
+        height: 300px;
+        background: var(--school-primary);
+        opacity: 0.1;
+        border-radius: 50%;
+      }
+      .feature-item-box {
+        background: var(--white);
+        color: var(--ink);
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s;
+      }
+      .feature-item-box:hover {
+        transform: translateY(-4px);
+        border-color: var(--school-primary);
+        box-shadow: 0 10px 15px -3px rgba(196, 30, 58, 0.1);
+      }
+      .banner-gradient {
+        background: linear-gradient(135deg, var(--school-primary) 0%, var(--school-accent) 100%);
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-white text-slate-900 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white text-slate-900 border-b-4 border-school-primary h-[80px] flex items-center shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-4">
+            <div class="w-[50px] h-[50px] bg-school-primary rounded-full flex items-center justify-center font-bold text-white text-xl">
+              KS
+            </div>
+            <div>
+              <h1 class="text-lg font-bold uppercase tracking-wider leading-tight text-school-primary">KRIPASADAN SCHOOL, LATUR</h1>
+              <p class="text-[11px] opacity-80 text-slate-500">लातूरच्या शैक्षणिक परंपरेचा मानबिंदू</p>
+            </div>
+          </div>
+          <div class="hidden lg:flex items-center space-x-8">
+            <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest">
+              <a href="#about" class="hover:text-school-primary transition-colors">About</a>
+              <a href="#features" class="hover:text-school-primary transition-colors">Features</a>
+              <a href="#principal" class="hover:text-school-primary transition-colors">Principal</a>
+              <a href="#admissions" class="hover:text-school-primary transition-colors">Admissions</a>
+            </div>
+            <div class="bg-school-primary text-white px-4 py-2 rounded-full font-bold text-xs animate-glow">
+              Admissions Open 2026-27
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="relative min-h-[600px] flex items-center justify-center overflow-hidden pt-20 px-4 md:px-8 bg-white">
+      <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-[1fr_340px] gap-8 py-12">
+        <!-- Hero Box -->
+        <div class="hero-geometric relative banner-gradient rounded-[16px] p-8 md:p-16 text-white flex flex-col justify-center overflow-hidden min-h-[450px] shadow-2xl">
+          <div class="absolute inset-0 z-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1523050335102-c32509087440?auto=format&fit=crop&q=80&w=2000" 
+                 alt="School Campus" 
+                 class="w-full h-full object-cover"
+                 referrerPolicy="no-referrer">
+          </div>
+          <div class="relative z-10">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+              विद्या विनयेन शोभते<br>
+              <span class="text-white text-2xl md:text-4xl block mt-2 opacity-90">Shaping Futures with Values & Excellence</span>
+            </h2>
+            <p class="text-lg opacity-90 max-w-xl mb-10">
+              Providing value education for over 35 years in a safe, nurturing, and technology-driven environment.
+            </p>
+            <a href="#apply" class="inline-block bg-white text-school-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-all transform hover:scale-105 shadow-xl">
+              प्रवेशासाठी अर्ज करा (Apply Now)
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar Inquiry Card -->
+        <div id="admissions" class="bg-white rounded-[16px] p-8 shadow-lg border border-slate-200 flex flex-col">
+          <h3 class="text-xl font-bold text-school-primary border-l-4 border-school-primary pl-3 mb-6">Quick Inquiry</h3>
+          <form class="space-y-4">
+            <div>
+              <label class="block text-[12px] font-bold text-slate-500 uppercase mb-1">Parent Name</label>
+              <input type="text" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-school-primary outline-none text-sm" placeholder="Enter your name">
+            </div>
+            <div>
+              <label class="block text-[12px] font-bold text-slate-500 uppercase mb-1">Student Grade</label>
+              <select class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-school-primary outline-none text-sm">
+                <option>Select Class</option>
+                <option>Playgroup / Nursery</option>
+                <option>Primary (1st - 5th)</option>
+                <option>Secondary (6th - 10th)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[12px] font-bold text-slate-500 uppercase mb-1">Phone Number</label>
+              <input type="tel" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-school-primary outline-none text-sm" placeholder="+91 00000 00000">
+            </div>
+            <button class="w-full bg-school-primary text-white py-3 rounded-lg font-bold text-sm hover:bg-school-accent transition-all mt-2">
+              Request Call Back
+            </button>
+          </form>
+
+          <div class="mt-8 pt-8 border-t border-dashed border-slate-300">
+            <h3 class="text-lg font-bold text-school-primary mb-4">Our Pride</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                <span class="text-sm font-medium">100% SSC Results</span>
+                <span class="text-sm font-extrabold text-school-primary">Consecutive</span>
+              </div>
+              <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                <span class="text-sm font-medium">Sports Gold</span>
+                <span class="text-sm font-extrabold text-school-primary">State Level</span>
+              </div>
+              <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                <span class="text-sm font-medium">Digital Class</span>
+                <span class="text-sm font-extrabold text-school-primary">Smart Tech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+            <div class="absolute -top-4 -left-4 w-24 h-24 bg-school-primary rounded-2xl -z-10 opacity-20"></div>
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1000" 
+                 alt="Students Learning" 
+                 class="rounded-2xl shadow-2xl"
+                 referrerPolicy="no-referrer">
+            <div class="absolute -bottom-8 -right-8 bg-school-primary text-white p-8 rounded-2xl shadow-xl hidden md:block">
+              <p class="text-4xl font-bold">35+</p>
+              <p class="text-xs uppercase tracking-widest opacity-80">Years of Legacy</p>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-school-primary font-bold tracking-widest text-sm uppercase mb-4">Latur's Pride</h3>
+            <h2 class="text-4xl md:text-5xl mb-6 text-slate-900">लातूरच्या शैक्षणिक परंपरेचा मानबिंदू</h2>
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+              Kripasadan School has been a beacon of excellence for over 35 years. We believe in holistic development, blending traditional values with modern education to create global citizens who are rooted in integrity.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="flex items-start space-x-3">
+                <div class="bg-school-primary/10 p-2 rounded-lg">
+                  <i data-lucide="shield-check" class="text-school-primary w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">Safe Environment</h4>
+                  <p class="text-xs text-slate-500">Secure & nurturing campus</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <div class="bg-school-primary/10 p-2 rounded-lg">
+                  <i data-lucide="users" class="text-school-primary w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">Holistic Growth</h4>
+                  <p class="text-xs text-slate-500">Mind, body & spirit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-24 bg-school-paper">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-[1fr_1.5fr] gap-8">
+          <!-- Principal Box -->
+          <div id="principal" class="bg-white rounded-[16px] p-8 border border-slate-200 flex items-center gap-6 shadow-sm hover:border-school-primary transition-all">
+            <div class="w-24 h-24 rounded-full border-4 border-school-primary overflow-hidden shrink-0">
+              <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&q=80&w=800" 
+                   alt="Principal" 
+                   class="w-full h-full object-cover"
+                   referrerPolicy="no-referrer">
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-school-primary mb-2">Principal's Message</h3>
+              <p class="text-sm italic text-slate-600 leading-relaxed">
+                "We believe in nurturing not just students, but citizens of character. Our legacy of 35 years continues to inspire."
+              </p>
+              <p class="mt-2 text-xs font-bold uppercase tracking-widest text-slate-400">Dr. Anjali Deshmukh</p>
+            </div>
+          </div>
+
+          <!-- Features Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="feature-item-box p-4 rounded-[12px] flex flex-col items-center justify-center text-center gap-2">
+              <i data-lucide="monitor" class="text-school-primary w-6 h-6"></i>
+              <strong class="text-xs">Digital Class</strong>
+              <span class="text-[10px] opacity-80">स्मार्ट वर्गखोल्या</span>
+            </div>
+            <div class="feature-item-box p-4 rounded-[12px] flex flex-col items-center justify-center text-center gap-2">
+              <i data-lucide="beaker" class="text-school-primary w-6 h-6"></i>
+              <strong class="text-xs">Science Lab</strong>
+              <span class="text-[10px] opacity-80">विज्ञान प्रयोगशाळा</span>
+            </div>
+            <div class="feature-item-box p-4 rounded-[12px] flex flex-col items-center justify-center text-center gap-2">
+              <i data-lucide="trophy" class="text-school-primary w-6 h-6"></i>
+              <strong class="text-xs">Playground</strong>
+              <span class="text-[10px] opacity-80">क्रीडांगण</span>
+            </div>
+            <div class="feature-item-box p-4 rounded-[12px] flex flex-col items-center justify-center text-center gap-2">
+              <i data-lucide="user-check" class="text-school-primary w-6 h-6"></i>
+              <strong class="text-xs">Faculty</strong>
+              <span class="text-[10px] opacity-80">तज्ञ शिक्षक</span>
+            </div>
+            <div class="feature-item-box p-4 rounded-[12px] flex flex-col items-center justify-center text-center gap-2">
+              <i data-lucide="palette" class="text-school-primary w-6 h-6"></i>
+              <strong class="text-xs">Cultural</strong>
+              <span class="text-[10px] opacity-80">सांस्कृतिक उपक्रम</span>
+            </div>
+            <div class="bg-school-primary text-white p-4 rounded-[12px] flex flex-col items-center justify-center text-center gap-2 shadow-md">
+              <i data-lucide="book-open" class="text-white w-6 h-6"></i>
+              <strong class="text-xs">Library</strong>
+              <span class="text-[10px] opacity-80 font-bold">ग्रंथालय</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principal's Message -->
+    <section id="principal" class="py-24 bg-white text-slate-900 overflow-hidden relative">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-school-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col md:flex-row items-center gap-16">
+          <div class="w-full md:w-1/3">
+            <div class="relative">
+              <div class="absolute inset-0 border-4 border-school-primary translate-x-4 translate-y-4 rounded-2xl opacity-20"></div>
+              <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&q=80&w=800" 
+                   alt="Principal" 
+                   class="relative z-10 rounded-2xl shadow-2xl"
+                   referrerPolicy="no-referrer">
+            </div>
+          </div>
+          <div class="w-full md:w-2/3">
+            <i data-lucide="quote" class="text-school-primary w-12 h-12 mb-6 opacity-20"></i>
+            <h2 class="text-4xl mb-6 font-bold text-school-primary">Principal's Message</h2>
+            <p class="text-xl font-serif italic mb-8 leading-relaxed opacity-90 text-slate-600">
+              "At Kripasadan, we don't just teach subjects; we nurture souls. Our mission is to empower every child with the knowledge and character needed to navigate the complexities of the modern world while remaining true to their roots."
+            </p>
+            <div>
+              <p class="font-bold text-2xl text-school-primary">Dr. Anjali Deshmukh</p>
+              <p class="text-sm uppercase tracking-widest opacity-70">Principal, Kripasadan School</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div class="p-8">
+            <div class="text-school-primary mb-4 flex justify-center">
+              <i data-lucide="award" class="w-12 h-12"></i>
+            </div>
+            <h3 class="text-5xl font-bold text-slate-900 mb-2">100%</h3>
+            <p class="text-slate-500 font-bold uppercase tracking-widest text-sm">SSC Results</p>
+          </div>
+          <div class="p-8 border-x border-slate-100">
+            <div class="text-school-primary mb-4 flex justify-center">
+              <i data-lucide="medal" class="w-12 h-12"></i>
+            </div>
+            <h3 class="text-5xl font-bold text-slate-900 mb-2">50+</h3>
+            <p class="text-slate-500 font-bold uppercase tracking-widest text-sm">Sports Gold Medalists</p>
+          </div>
+          <div class="p-8">
+            <div class="text-school-primary mb-4 flex justify-center">
+              <i data-lucide="star" class="w-12 h-12"></i>
+            </div>
+            <h3 class="text-5xl font-bold text-slate-900 mb-2">Top 5</h3>
+            <p class="text-slate-500 font-bold uppercase tracking-widest text-sm">Ranked in Latur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inquiry Form -->
+    <section id="apply" class="py-24 bg-slate-900 text-white relative">
+      <div class="absolute inset-0 z-0 opacity-20">
+        <img src="https://images.unsplash.com/photo-1523050335102-c32509087440?auto=format&fit=crop&q=80&w=2000" 
+             alt="Background" 
+             class="w-full h-full object-cover"
+             referrerPolicy="no-referrer">
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-3xl text-slate-900 shadow-2xl border border-slate-100">
+          <div class="text-center mb-10">
+            <h2 class="text-4xl mb-4 font-bold text-school-primary">Admissions Inquiry</h2>
+            <p class="text-slate-500">Fill out the form below and our team will get back to you shortly.</p>
+          </div>
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-widest mb-2">Student Name</label>
+                <input type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-school-primary focus:border-transparent outline-none transition-all" placeholder="Enter full name">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-widest mb-2">Applying for Class</label>
+                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-school-primary focus:border-transparent outline-none transition-all">
+                  <option>Nursery</option>
+                  <option>Class 1 - 5</option>
+                  <option>Class 6 - 10</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest mb-2">Phone Number</label>
+              <input type="tel" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-school-primary focus:border-transparent outline-none transition-all" placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest mb-2">Message (Optional)</label>
+              <textarea class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-school-primary focus:border-transparent outline-none transition-all h-32" placeholder="Any specific questions?"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-school-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-school-accent transition-all shadow-lg">
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 text-white pt-20 pb-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-3 mb-6">
+              <div class="w-10 h-10 bg-school-primary rounded-full flex items-center justify-center">
+                <i data-lucide="graduation-cap" class="text-white w-6 h-6"></i>
+              </div>
+              <h1 class="text-2xl font-bold text-school-primary">KRIPASADAN</h1>
+            </div>
+            <p class="text-slate-400 mb-8 max-w-md">
+              A premier educational institution in Latur, dedicated to providing quality education and fostering the overall development of students.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-school-primary hover:text-white transition-all">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-school-primary hover:text-white transition-all">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold mb-6 uppercase tracking-widest text-sm text-school-primary">Quick Links</h4>
+            <ul class="space-y-4 text-slate-400 text-sm">
+              <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+              <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#features" class="hover:text-white transition-colors">Campus Life</a></li>
+              <li><a href="#admissions" class="hover:text-white transition-colors">Admissions</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-6 uppercase tracking-widest text-sm text-school-primary">Contact Us</h4>
+            <ul class="space-y-4 text-slate-400 text-sm">
+              <li class="flex items-start space-x-3">
+                <i data-lucide="map-pin" class="w-5 h-5 text-school-primary shrink-0"></i>
+                <span>Ambajogai Road, Latur, Maharashtra 413512</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="phone" class="w-5 h-5 text-school-primary shrink-0"></i>
+                <span>+91 2382 123456</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="mail" class="w-5 h-5 text-school-primary shrink-0"></i>
+                <span>info@kripasadanlatur.edu.in</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 tracking-widest uppercase">
+          <p>&copy; 2026 Kripasadan School, Latur. All Rights Reserved.</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="fixed bottom-10 right-10 z-50 bg-[#25D366] text-white px-6 py-3 rounded-full shadow-2xl hover:scale-110 transition-all flex items-center gap-3 font-bold">
+      <i data-lucide="message-circle" class="w-6 h-6"></i>
+      <span>WhatsApp Us</span>
+    </a>
+
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
