@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Care Dental & Implant Center | Painless & Professional Dental Care</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medicalBlue: '#007bff',
+                        mintGreen: '#f0fff4',
+                        softMint: '#e6fffa',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 md:h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 md:w-10 md:h-10 bg-medicalBlue rounded-lg flex items-center justify-center text-white">
+                        <i class="fas fa-tooth text-lg md:text-xl"></i>
+                    </div>
+                    <span class="font-serif text-lg md:text-xl font-bold text-slate-900">Smile Care</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#services" class="hover:text-medicalBlue transition">Services</a>
+                    <a href="#why-us" class="hover:text-medicalBlue transition">Why Choose Us</a>
+                    <a href="#testimonials" class="hover:text-medicalBlue transition">Testimonials</a>
+                    <a href="#contact" class="hover:text-medicalBlue transition">Contact</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="bg-medicalBlue text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-semibold text-xs md:text-sm hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                        Book Now
+                    </a>
+                    <button class="md:hidden text-slate-600" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-b border-slate-100" id="mobile-menu">
+            <div class="px-4 py-4 space-y-4 text-sm font-medium">
+                <a href="#services" class="block hover:text-medicalBlue transition">Services</a>
+                <a href="#why-us" class="block hover:text-medicalBlue transition">Why Choose Us</a>
+                <a href="#testimonials" class="block hover:text-medicalBlue transition">Testimonials</a>
+                <a href="#contact" class="block hover:text-medicalBlue transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-medicalBlue uppercase bg-blue-50 rounded-full">
+                        15+ Years of Excellence
+                    </span>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-tight mb-4">
+                        <span class="text-medicalBlue">Painless & Professional</span> Dental Care
+                    </h1>
+                    <p class="text-lg md:text-xl font-bold italic text-slate-700 mb-8">
+                        "तुमच्या हास्याची जबाबदारी आता आमची"
+                    </p>
+                    <p class="text-base md:text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0">
+                        Experience world-class dental treatments with state-of-the-art equipment and a team dedicated to your comfort and care.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-medicalBlue text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-xl shadow-blue-200 flex items-center justify-center gap-2">
+                            Book My Consultation <i class="fas fa-calendar-check"></i>
+                        </a>
+                        <a href="tel:+911234567890" class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                            <i class="fas fa-phone-alt text-medicalBlue"></i> Call Now
+                        </a>
+                    </div>
+                    <div class="mt-10 flex items-center justify-center lg:justify-start gap-6 opacity-70">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-shield-alt text-medicalBlue"></i>
+                            <span class="text-sm font-medium">ISO Certified</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-user-md text-medicalBlue"></i>
+                            <span class="text-sm font-medium">Expert Doctors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mt-12 lg:mt-0">
+                    <div class="absolute -top-10 -right-10 w-48 h-48 bg-medicalBlue/10 rounded-full blur-3xl lg:w-64 lg:h-64 lg:-top-20 lg:-right-20"></div>
+                    <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-softMint/50 rounded-full blur-3xl lg:w-64 lg:h-64 lg:-bottom-20 lg:-left-20"></div>
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800" 
+                         alt="Modern Dental Clinic" 
+                         class="rounded-3xl shadow-2xl relative z-10 w-full object-cover aspect-[4/3]"
+                         referrerpolicy="no-referrer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4">Our Specialized Services</h2>
+                <div class="w-20 h-1.5 bg-medicalBlue mx-auto rounded-full"></div>
+                <p class="mt-6 text-slate-600 max-w-2xl mx-auto">We offer a wide range of dental treatments using the latest technology to ensure a painless and effective experience.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-medicalBlue/30 hover:bg-white">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-medicalBlue mb-6">
+                        <i class="fas fa-tooth text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Painless Tooth Extraction</h3>
+                    <p class="text-slate-600">Gentle and stress-free removal of damaged teeth using advanced numbing techniques.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-medicalBlue/30 hover:bg-white">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-medicalBlue mb-6">
+                        <i class="fas fa-x-ray text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Digital X-Rays</h3>
+                    <p class="text-slate-600">High-precision imaging with 90% less radiation for accurate diagnosis.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-medicalBlue/30 hover:bg-white">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-medicalBlue mb-6">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Laser Dentistry</h3>
+                    <p class="text-slate-600">Minimally invasive treatments for gum diseases and cavities with faster healing.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-medicalBlue/30 hover:bg-white">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-medicalBlue mb-6">
+                        <i class="fas fa-vial text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dental Implants</h3>
+                    <p class="text-slate-600">Permanent and natural-looking tooth replacement solutions for a confident smile.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-medicalBlue/30 hover:bg-white">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-medicalBlue mb-6">
+                        <i class="fas fa-sparkles text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Teeth Whitening</h3>
+                    <p class="text-slate-600">Professional whitening treatments to brighten your smile in just one visit.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-medicalBlue/30 hover:bg-white">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-medicalBlue mb-6">
+                        <i class="fas fa-smile-beam text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Smile Makeover</h3>
+                    <p class="text-slate-600">Customized aesthetic treatments to give you the perfect smile you've always wanted.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-medicalBlue/5 skew-x-12 transform translate-x-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-serif text-3xl md:text-4xl mb-8">Why Choose Smile Care?</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-medicalBlue flex items-center justify-center">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">International Sterilization Standards</h4>
+                                <p class="text-slate-400">We follow strict global protocols to ensure 100% hygiene and safety for every patient.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-medicalBlue flex items-center justify-center">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Zero Waiting Time</h4>
+                                <p class="text-slate-400">We value your time. Our appointment-based system ensures you are seen promptly.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-medicalBlue flex items-center justify-center">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">State-of-the-art Machinery</h4>
+                                <p class="text-slate-400">Equipped with the latest dental technology for precise and painless treatments.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-medicalBlue flex items-center justify-center">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Affordable Family Packages</h4>
+                                <p class="text-slate-400">Quality dental care shouldn't be expensive. We offer budget-friendly plans for the whole family.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400" alt="Clinic Interior" class="rounded-2xl w-full h-48 md:h-64 object-cover" referrerpolicy="no-referrer">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400" alt="Dental Equipment" class="rounded-2xl w-full h-48 md:h-64 object-cover sm:mt-8" referrerpolicy="no-referrer">
+                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=400" alt="Happy Patient" class="rounded-2xl w-full h-48 md:h-64 object-cover sm:-mt-8" referrerpolicy="no-referrer">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=400" alt="Dental Care" class="rounded-2xl w-full h-48 md:h-64 object-cover" referrerpolicy="no-referrer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4">What Our Patients Say</h2>
+                <div class="w-20 h-1.5 bg-medicalBlue mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"I was very scared of tooth extraction, but the doctors here made it completely painless. The staff is very friendly and the clinic is super clean."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-medicalBlue font-bold">RK</div>
+                        <div>
+                            <h5 class="font-bold">Rahul Kulkarni</h5>
+                            <p class="text-xs text-slate-500">Ausa Road, Latur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"Best dental clinic in Latur! I got my implants done here. The state-of-the-art machinery and professional approach are impressive."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-medicalBlue font-bold">SP</div>
+                        <div>
+                            <h5 class="font-bold">Sunita Patil</h5>
+                            <p class="text-xs text-slate-500">Shivaji Nagar, Latur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"Very affordable family packages. My kids actually enjoy visiting the dentist now. Highly recommended for anyone in Gandhi Chowk area."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-medicalBlue font-bold">AD</div>
+                        <div>
+                            <h5 class="font-bold">Anil Deshmukh</h5>
+                            <p class="text-xs text-slate-500">Gandhi Chowk, Latur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Form -->
+    <section id="contact" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-blue-50/50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-2">
+                <div class="p-8 md:p-12 lg:p-16 bg-medicalBlue text-white">
+                    <h2 class="font-serif text-3xl md:text-4xl mb-6">Ready for a Better Smile?</h2>
+                    <p class="text-blue-100 mb-10 text-lg">Fill out the form and our team will get back to you within 2 hours to schedule your consultation.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span>contact@smilecarelatur.com</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>Shop No. 12, Shivneri Heights, Ausa Road, Latur</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 p-6 bg-white/10 rounded-2xl border border-white/20">
+                        <h4 class="font-bold mb-2">Opening Hours</h4>
+                        <div class="flex justify-between text-sm text-blue-100">
+                            <span>Mon - Sat:</span>
+                            <span>10:00 AM - 08:00 PM</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-blue-100 mt-2">
+                            <span>Sunday:</span>
+                            <span>By Appointment Only</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 md:p-12 lg:p-16">
+                    <form action="#" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
+                            <input type="text" placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-medicalBlue focus:ring-2 focus:ring-blue-100 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Mobile Number</label>
+                            <input type="tel" placeholder="Enter mobile number" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-medicalBlue focus:ring-2 focus:ring-blue-100 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Treatment Needed</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-medicalBlue focus:ring-2 focus:ring-blue-100 outline-none transition bg-white">
+                                <option>General Checkup</option>
+                                <option>Painless Extraction</option>
+                                <option>Dental Implants</option>
+                                <option>Teeth Whitening</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-medicalBlue text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-lg shadow-blue-100">
+                            Get a Call Back
+                        </button>
+                    </form>
+                    <p class="mt-6 text-center text-xs text-slate-400">
+                        By clicking "Get a Call Back", you agree to our privacy policy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 pt-16 pb-8 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-medicalBlue rounded flex items-center justify-center text-white">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold text-slate-900">Smile Care Dental & Implant Center</span>
+                    </div>
+                    <p class="text-slate-500 max-w-md mb-6">
+                        Providing premium dental care in Latur for over 15 years. We are committed to delivering painless, professional, and affordable treatments for your entire family.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-medicalBlue hover:border-medicalBlue transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-medicalBlue hover:border-medicalBlue transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-medicalBlue hover:border-medicalBlue transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a href="#services" class="hover:text-medicalBlue transition">Our Services</a></li>
+                        <li><a href="#why-us" class="hover:text-medicalBlue transition">Why Choose Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-medicalBlue transition">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-medicalBlue transition">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li class="flex gap-3">
+                            <i class="fas fa-map-marker-alt text-medicalBlue mt-1"></i>
+                            <span>Shop No. 12, Shivneri Heights, Ausa Road, Latur</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-phone-alt text-medicalBlue mt-1"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-envelope text-medicalBlue mt-1"></i>
+                            <span>info@smilecarelatur.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-200 text-center text-slate-400 text-xs">
+                <p>&copy; 2024 Smile Care Dental & Implant Center. All rights reserved. | Designed for Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210" class="fixed bottom-8 right-8 w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Form Handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you! We have received your request. Our team will call you back shortly.');
+                btn.innerText = originalText;
+                btn.disabled = false;
+                this.reset();
+            }, 1500);
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                menu.classList.add('hidden'); // Close menu on click
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
