@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Latur Treat - Family Restaurant & Dhaba</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royalRed: '#991b1b',
+                        warmOrange: '#f59e0b',
+                        cream: '#fdfcf0',
+                        darkBlack: '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        marathi: ['Mukta', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .menu-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .menu-card:hover img {
+            transform: scale(1.05);
+        }
+        .royal-border {
+            border: 1px solid #991b1b;
+        }
+        .section-tag {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .cta-btn {
+            background: #991b1b;
+            color: white;
+            padding: 18px 36px;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(153,27,27,0.2);
+            transition: all 0.3s ease;
+        }
+        .cta-btn:hover {
+            background: #7f1616;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(153,27,27,0.3);
+        }
+        .usp-icon {
+            width: 40px;
+            height: 40px;
+            background: #f59e0b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .lead-form-container {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .form-input-theme {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .form-input-theme:focus {
+            border-color: #f59e0b;
+            outline: none;
+            background: rgba(0,0,0,0.4);
+        }
+        .review-bubble-theme {
+            background: rgba(245,158,11,0.1);
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            font-style: italic;
+            font-size: 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .whatsapp-link-theme {
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-link-theme:hover {
+            background: #1eb954;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-cream text-darkBlack font-sans selection:bg-warmOrange selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-darkBlack border-b border-warmOrange/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="text-white font-display text-xl md:text-2xl font-extrabold tracking-tight uppercase">
+                        The Latur <span class="text-warmOrange">Treat</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 text-white/80 font-bold text-xs uppercase tracking-widest">
+                    <a href="#menu" class="hover:text-warmOrange transition-colors">Menu</a>
+                    <a href="#about" class="hover:text-warmOrange transition-colors">Why Us</a>
+                    <a href="#reviews" class="hover:text-warmOrange transition-colors">Reviews</a>
+                    <a href="#contact" class="hover:text-warmOrange transition-colors">Contact</a>
+                </div>
+                <div class="text-warmOrange font-bold text-[10px] md:text-xs uppercase tracking-widest border border-warmOrange/30 px-3 py-1 rounded">
+                    Home Delivery
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center bg-cream pt-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-12">
+            <div class="lg:col-span-7 animate-fade-in">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-0.5 bg-warmOrange"></div>
+                    <span class="text-darkBlack font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs">Family Restaurant & Dhaba</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-marathi font-extrabold text-royalRed mb-6 leading-tight break-words">
+                    लातूरची अस्सल चव - व्हेज आणि नॉन-व्हेजचा शाही थाट!
+                </h1>
+                <p class="text-base md:text-lg text-gray-700 mb-10 font-medium leading-relaxed max-w-2xl">
+                    Experience the legacy of authentic Maharashtrian Thali, fiery spicy biryanis, and royal paneer delicacies crafted for food lovers.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#book" class="cta-btn">
+                        आजच टेबल बुक करा
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800" 
+                         alt="Indian Thali" 
+                         class="w-full h-full object-cover"
+                         referrerpolicy="no-referrer">
+                </div>
+                <div class="absolute -bottom-4 -right-4 w-full h-full bg-warmOrange/20 -z-10 rounded-2xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <div class="bg-cream">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Menu Showcase -->
+            <div class="lg:col-span-8">
+                <div class="mb-16">
+                    <h2 class="text-3xl md:text-4xl font-display font-extrabold text-royalRed mb-4 uppercase tracking-tight">Our Signature Menu</h2>
+                    <div class="w-20 h-1.5 bg-warmOrange"></div>
+                </div>
+
+                <!-- Pure Veg -->
+                <div class="mb-20">
+                    <span class="section-tag">Pure Veg Delights</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                        <!-- Veg Card 1 -->
+                        <div class="menu-card border border-gray-100">
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&q=80&w=800" alt="Paneer Masala" class="w-full h-full object-cover transition-transform duration-500" referrerpolicy="no-referrer">
+                                <span class="absolute top-3 right-3 bg-warmOrange text-darkBlack text-[10px] font-bold px-2 py-1 rounded uppercase">Best Seller</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex justify-between items-center">
+                                    <h4 class="text-lg font-bold text-darkBlack">Paneer Tikka Masala</h4>
+                                    <p class="text-royalRed font-extrabold">₹280</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Veg Card 2 -->
+                        <div class="menu-card border border-gray-100">
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800" alt="Veg Kolhapuri" class="w-full h-full object-cover transition-transform duration-500" referrerpolicy="no-referrer">
+                            </div>
+                            <div class="p-5">
+                                <div class="flex justify-between items-center">
+                                    <h4 class="text-lg font-bold text-darkBlack">Veg Kolhapuri</h4>
+                                    <p class="text-royalRed font-extrabold">₹240</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Non-Veg -->
+                <div>
+                    <span class="section-tag">Non-Veg Specials</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                        <!-- Non-Veg Card 1 -->
+                        <div class="menu-card border border-gray-100">
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&q=80&w=800" alt="Chicken Maratha" class="w-full h-full object-cover transition-transform duration-500" referrerpolicy="no-referrer">
+                                <span class="absolute top-3 right-3 bg-royalRed text-white text-[10px] font-bold px-2 py-1 rounded uppercase">Must Try</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex justify-between items-center">
+                                    <h4 class="text-lg font-bold text-darkBlack">Chicken Maratha</h4>
+                                    <p class="text-royalRed font-extrabold">₹320</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Non-Veg Card 2 -->
+                        <div class="menu-card border border-gray-100">
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&q=80&w=800" alt="Biryani" class="w-full h-full object-cover transition-transform duration-500" referrerpolicy="no-referrer">
+                            </div>
+                            <div class="p-5">
+                                <div class="flex justify-between items-center">
+                                    <h4 class="text-lg font-bold text-darkBlack">Hyderabadi Dum Biryani</h4>
+                                    <p class="text-royalRed font-extrabold">₹380</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-4 space-y-8">
+                <div class="bg-darkBlack rounded-2xl p-8 text-white h-fit">
+                    <div class="space-y-8 mb-12">
+                        <div class="flex items-center gap-4">
+                            <div class="usp-icon">✓</div>
+                            <div>
+                                <h5 class="font-bold text-lg">Family Ambience</h5>
+                                <p class="text-white/60 text-xs">Perfect for dinner outings.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="usp-icon">★</div>
+                            <div>
+                                <h5 class="font-bold text-lg">Live Kitchen</h5>
+                                <p class="text-white/60 text-xs">Hygiene & Quality first.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="contact" class="lead-form-container">
+                        <h4 class="text-xl font-bold mb-6">Plan a Party</h4>
+                        <form class="space-y-3">
+                            <input type="text" placeholder="Your Name" class="form-input-theme">
+                            <input type="tel" placeholder="Mobile Number" class="form-input-theme">
+                            <button type="submit" class="w-full py-4 bg-warmOrange text-darkBlack font-bold rounded hover:bg-white transition-all uppercase tracking-widest text-xs">
+                                Get a Quote
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="review-bubble-theme">
+                        "Best taste in Latur! The Ausa Road branch maintains incredible hygiene and authenticity."
+                        <div class="text-right mt-4 text-warmOrange font-bold text-sm">— Sachin Deshmukh</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Visit Us -->
+    <section id="about" class="bg-white py-24 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-display font-extrabold mb-8 text-darkBlack uppercase tracking-tight">Why Dine With Us?</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="usp-icon">✓</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 text-darkBlack">High Hygiene Standards</h4>
+                                <p class="text-gray-600">We follow strict sanitization protocols to ensure your safety and health.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="usp-icon">★</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 text-darkBlack">Family-Friendly Ambience</h4>
+                                <p class="text-gray-600">Spacious seating designed for family gatherings and comfort.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="usp-icon">✓</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 text-darkBlack">Special Birthday Zone</h4>
+                                <p class="text-gray-600">Dedicated area for your special celebrations with custom decor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1000" alt="Restaurant Ambience" class="rounded-2xl shadow-2xl border-4 border-cream" referrerpolicy="no-referrer">
+                    <div class="absolute -bottom-6 -left-6 bg-royalRed p-8 rounded-2xl text-white hidden md:block shadow-xl">
+                        <p class="text-4xl font-black">15+</p>
+                        <p class="font-bold uppercase tracking-wider text-[10px]">Years of Legacy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section id="reviews" class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-extrabold text-royalRed uppercase tracking-tight">What Our Guests Say</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="review-bubble-theme bg-white shadow-sm border-none">
+                    "Best taste in Latur! Their Chicken Maratha is a must-try. The Ausa Road branch has the best vibes."
+                    <div class="text-right mt-4 text-royalRed font-bold text-sm">— Rahul Deshmukh</div>
+                </div>
+                <div class="review-bubble-theme bg-white shadow-sm border-none">
+                    "Authentic Maharashtrian flavors. The Veg Thali is huge and very satisfying. Great for families."
+                    <div class="text-right mt-4 text-royalRed font-bold text-sm">— Priya Kulkarni</div>
+                </div>
+                <div class="review-bubble-theme bg-white shadow-sm border-none">
+                    "Celebrated my son's birthday here. The party zone is excellent and staff is very cooperative."
+                    <div class="text-right mt-4 text-royalRed font-bold text-sm">— Amit Patil</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Form -->
+    <section id="book" class="py-24 bg-royalRed text-white">
+        <div class="max-w-3xl mx-auto px-6 md:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-display font-extrabold mb-4 uppercase tracking-tight">Plan Your Special Event</h2>
+            <p class="text-white/80 mb-12 font-medium">Fill out the form below and our team will get back to you to plan your perfect party or dinner.</p>
+            <div class="lead-form-container text-left bg-white/10 border-white/20">
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Your Name" class="form-input-theme bg-white/10 border-white/20">
+                        <input type="tel" placeholder="Phone Number" class="form-input-theme bg-white/10 border-white/20">
+                    </div>
+                    <select class="form-input-theme bg-white/10 border-white/20 text-white/60">
+                        <option value="" disabled selected>Event Type</option>
+                        <option value="birthday">Birthday Party</option>
+                        <option value="anniversary">Anniversary</option>
+                        <option value="dinner">Family Dinner</option>
+                        <option value="other">Other Celebration</option>
+                    </select>
+                    <textarea placeholder="Special Requirements (Optional)" rows="4" class="form-input-theme bg-white/10 border-white/20"></textarea>
+                    <button type="submit" class="w-full bg-warmOrange text-darkBlack font-bold py-4 rounded hover:bg-white transition-all text-lg uppercase tracking-widest">
+                        Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkBlack text-white py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center space-x-2 mb-6">
+                    <div class="w-10 h-10 bg-royalRed rounded-full flex items-center justify-center">
+                        <span class="text-warmOrange font-bold text-xl">LT</span>
+                    </div>
+                    <span class="text-white font-display text-2xl font-bold tracking-tight">The Latur Treat</span>
+                </div>
+                <p class="text-white/50 max-w-sm mb-8">Bringing the authentic flavors of Latur to your plate. A perfect blend of tradition and taste for the whole family.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-warmOrange transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-warmOrange transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6">Location</h4>
+                <p class="text-white/50 text-sm leading-relaxed">
+                    The Latur Treat,<br>
+                    Ausa Road, Near Shivaji Chowk,<br>
+                    Latur, Maharashtra 413512
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6">Contact</h4>
+                <p class="text-white/50 text-sm mb-2">+91 98765 43210</p>
+                <p class="text-white/50 text-sm">info@thelaturtreat.com</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/5 text-center text-white/30 text-xs">
+            © 2024 The Latur Treat. All rights reserved. Designed for Royalty.
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919876543210?text=I'd%20like%20to%20inquire%20about%20home%20delivery" 
+       class="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center gap-2 group"
+       target="_blank">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.067 2.877 1.215 3.076.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 whitespace-nowrap font-bold">Delivery Inquiry</span>
+    </a>
+
+</body>
+</html>
+
