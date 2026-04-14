@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latur Agro Industries - Premium Agri-Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --organic-green: #166534;
+            --sun-yellow: #FDE047;
+            --soil-brown: #451a03;
+            --off-white: #FAF9F6;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--soil-brown);
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .decorative-dots {
+            background-image: radial-gradient(#451a03 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+
+        .hero-image-mask {
+            border-radius: 140px 0 140px 0;
+        }
+
+        .why-us-mask {
+            border-radius: 80px 0 80px 0;
+        }
+
+        .selection-agro {
+            selection-background-color: var(--sun-yellow);
+            selection-color: var(--soil-brown);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        agro: {
+                            green: '#166534',
+                            yellow: '#FDE047',
+                            brown: '#451a03',
+                            offwhite: '#FAF9F6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="selection-agro antialiased">
+    <div class="min-h-screen p-6 md:p-10 flex flex-col gap-8 relative overflow-x-hidden">
+        <div class="decorative-dots absolute top-2.5 right-2.5 w-32 h-32 opacity-10 pointer-events-none"></div>
+        
+        <!-- Header -->
+        <header class="flex justify-between items-center border-b-2 border-agro-green/10 pb-6">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-serif font-black text-agro-green uppercase tracking-wider">
+                    Latur Agro
+                </span>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-agro-green uppercase">
+                <a href="#sectors" class="hover:opacity-70 transition-opacity">उत्पादने</a>
+                <a href="#why-us" class="hover:opacity-70 transition-opacity">प्रक्रिया</a>
+                <a href="#contact" class="hover:opacity-70 transition-opacity">शेतकरी संपर्क</a>
+                <a href="#" class="hover:opacity-70 transition-opacity">आमच्याबद्दल</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="p-2 text-agro-green">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Nav (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white rounded-xl border border-agro-brown/10 p-6 space-y-4 shadow-xl z-50">
+            <a href="#sectors" class="block text-lg font-bold text-agro-green uppercase">उत्पादने</a>
+            <a href="#why-us" class="block text-lg font-bold text-agro-green uppercase">प्रक्रिया</a>
+            <a href="#contact" class="block text-lg font-bold text-agro-green uppercase">शेतकरी संपर्क</a>
+            <button class="w-full bg-agro-green text-agro-yellow px-6 py-3 rounded font-bold uppercase">
+                आजच कोटेशन मिळवा
+            </button>
+        </div>
+
+        <!-- Hero Section -->
+        <main class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] items-center gap-12 py-8">
+            <div class="fade-in">
+                <h1 class="text-4xl md:text-6xl font-serif font-bold text-agro-green leading-[1.1] mb-6">
+                    लातूरच्या सुपीक काळ्या मातीतून थेट तुमच्यापर्यंत – Quality You Can Trust
+                </h1>
+                <p class="text-xl text-agro-brown/80 leading-relaxed mb-10 max-w-[550px]">
+                    Expertly sourced Soybeans, Premium Pulses (Tur Dal), and Eco-Friendly Organic Fertilizers for sustainable growth and pure health.
+                </p>
+                <button class="inline-block bg-agro-green text-agro-yellow px-10 py-5 rounded font-bold uppercase text-lg shadow-[0_4px_14px_rgba(22,101,52,0.3)] hover:translate-y-[-2px] transition-all">
+                    आजच कोटेशन मिळवा
+                </button>
+            </div>
+
+            <div class="relative h-96 bg-agro-green hero-image-mask border-[10px] border-agro-yellow flex items-center justify-center text-agro-yellow overflow-hidden shadow-2xl">
+                <img 
+                    src="https://picsum.photos/seed/agro-farm/1000/1000" 
+                    alt="Latur Fertile Land" 
+                    class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale"
+                >
+                <div class="relative z-10 text-center">
+                    <div class="text-6xl mb-4">🌾</div>
+                    <div class="font-serif italic text-2xl">Purely Sourced from Latur</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Key Sectors -->
+        <section id="sectors" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white border border-agro-brown/10 p-8 rounded-2xl flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-agro-yellow rounded-full flex items-center justify-center font-bold text-agro-brown text-2xl">🌱</div>
+                <h3 class="text-2xl font-serif font-bold text-agro-green">Soybean & Oils</h3>
+                <p class="text-base text-agro-brown/60 leading-relaxed">Highest protein content soybeans processed with cold-press technology to maintain 100% nutrient purity.</p>
+            </div>
+            <div class="bg-white border border-agro-brown/10 p-8 rounded-2xl flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-agro-yellow rounded-full flex items-center justify-center font-bold text-agro-brown text-2xl">🍛</div>
+                <h3 class="text-2xl font-serif font-bold text-agro-green">Premium Pulses</h3>
+                <p class="text-base text-agro-brown/60 leading-relaxed">Latur's world-famous Tur Dal and Moong, polished naturally without chemicals for authentic taste.</p>
+            </div>
+            <div class="bg-white border border-agro-brown/10 p-8 rounded-2xl flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-agro-yellow rounded-full flex items-center justify-center font-bold text-agro-brown text-2xl">🚜</div>
+                <h3 class="text-2xl font-serif font-bold text-agro-green">Agri-Inputs</h3>
+                <p class="text-base text-agro-brown/60 leading-relaxed">Certified seeds and organic fertilizers specifically formulated for the Deccan plateau soil profile.</p>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-us" class="bg-white border border-agro-brown/10 rounded-[40px] p-8 md:p-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-agro-green mb-8">Why Latur Agro Industries?</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="flex flex-col gap-2">
+                        <i data-lucide="shield-check" class="text-agro-green w-8 h-8 mb-2"></i>
+                        <h4 class="font-bold text-agro-brown uppercase text-sm tracking-wider">ISO Certified</h4>
+                        <p class="text-sm text-agro-brown/60">International standards for zero contamination.</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <i data-lucide="users" class="text-agro-green w-8 h-8 mb-2"></i>
+                        <h4 class="font-bold text-agro-brown uppercase text-sm tracking-wider">Farmer Connect</h4>
+                        <p class="text-sm text-agro-brown/60">Working with 5000+ local farmers directly.</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <i data-lucide="factory" class="text-agro-green w-8 h-8 mb-2"></i>
+                        <h4 class="font-bold text-agro-brown uppercase text-sm tracking-wider">Modern Processing</h4>
+                        <p class="text-sm text-agro-brown/60">Preserving organic integrity of every grain.</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <i data-lucide="truck" class="text-agro-green w-8 h-8 mb-2"></i>
+                        <h4 class="font-bold text-agro-brown uppercase text-sm tracking-wider">Fast Logistics</h4>
+                        <p class="text-sm text-agro-brown/60">Efficient supply chain network across India.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-video why-us-mask overflow-hidden border-4 border-agro-yellow shadow-xl">
+                    <img 
+                        src="https://picsum.photos/seed/indian-farmer/1200/800" 
+                        alt="Modern Indian Farmer" 
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-agro-green text-agro-yellow p-6 rounded-2xl font-serif italic text-lg shadow-lg">
+                    Empowering farmers, enriching lives.
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Footer -->
+        <footer id="contact" class="flex flex-col gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10 border-t border-agro-brown/10">
+                <div class="lg:col-span-2">
+                    <span class="text-2xl font-serif font-black text-agro-green uppercase tracking-wider mb-4 block">Latur Agro</span>
+                    <p class="text-agro-brown/60 max-w-sm leading-relaxed">
+                        Bringing the richness of Latur's fertile black soil to the world. Committed to sustainable agriculture and premium quality.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-agro-green uppercase text-sm mb-6 tracking-widest">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-agro-brown/70">
+                        <li class="flex gap-3 items-center"><i data-lucide="map-pin" size="16" class="text-agro-green"></i> MIDC Area, Latur, MH</li>
+                        <li class="flex gap-3 items-center"><i data-lucide="phone" size="16" class="text-agro-green"></i> +91 98765 43210</li>
+                        <li class="flex gap-3 items-center"><i data-lucide="mail" size="16" class="text-agro-green"></i> contact@laturagro.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-agro-green uppercase text-sm mb-6 tracking-widest">Trust Factors</h4>
+                    <div class="flex flex-col gap-3 text-xs font-bold text-agro-green">
+                        <div class="flex items-center gap-2 bg-agro-yellow/20 p-2 rounded"><span>✓</span> ISO 9001:2015</div>
+                        <div class="flex items-center gap-2 bg-agro-yellow/20 p-2 rounded"><span>✓</span> Direct Farmer Connect</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center p-6 bg-agro-green text-white rounded-xl gap-4">
+                <div class="text-xs opacity-80 uppercase tracking-widest font-bold">
+                    © 2024 Latur Agro Industries Pvt. Ltd. | MH-24 Region
+                </div>
+                <div class="flex gap-6 text-[10px] uppercase font-bold tracking-tighter">
+                    <span>Privacy Policy</span>
+                    <span>Terms of Service</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
